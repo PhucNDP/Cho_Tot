@@ -1,0 +1,225 @@
+* {
+    box-sizing: inherit;
+}
+
+@import "variable";
+@import "mixins";
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.grid {
+    // width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.pd_left{
+    padding-left: 4px;
+}
+.pd_right{
+    padding-right: 4px;
+}
+.text-icon{
+    font-size: 1.4rem;
+}
+.header {
+    min-height: $headerHeight;
+    @include headerColor();
+
+    &__navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__navbar-lists {
+        line-height: $NavHeight;
+        // margin: 10px 0px 10px 10px;
+    }
+
+    &__navbar-item {
+        font-size: 1.2rem;
+        display: inline;
+
+        .navbar-item {
+            padding: 0 21px;
+            color: $textColor;
+            text-decoration: none;
+            font-weight: 500;
+
+            .navbar-item-icon {
+                font-size: 1.6rem;
+                font-weight: 500;
+            }
+
+            .icon-mail {
+                margin-right: 12px;
+            }
+
+            .icon-down {
+                margin-left: 12px;
+            }
+
+            .span {
+                margin: 0px 32px;
+                display: inline-block;
+            }
+        }
+
+        .navbar-item:hover {
+            opacity: 70%;
+        }
+    }
+}
+
+.item-primary {
+    background-color: $itemHeaderColor;
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-bottom: 8px;
+    // border: 1px solid #ccc;
+    border-bottom-left-radius: 8px;
+}
+
+.header__with-search {
+    display: flex;
+    align-items: center;
+
+    height: calc($headerHeight - $NavHeight);
+    padding: 0 10px;
+}
+
+.header__logo {
+    display: flex;
+
+    &-img {
+        width: 139px;
+        height: 35px;
+    }
+
+    &-nav {
+        @include hd_nav;
+        text-align: center;
+        @include flex_center;
+        font-size: 1.6rem;
+        .header__logo-nav-icon{
+            margin-right: 10px;
+            margin-left: 8px;
+        }
+        .icon-nav{
+            font-weight: 500;
+            font-size: 1.3rem;
+        }
+        .span{
+            color: #333;
+        }
+    }
+}
+.header__search{
+    display: flex;
+    flex: 1;
+    background-color: $whiteColor;
+    height: 40px;
+    border-radius: 2px;
+    align-items: center;
+    &-input{
+    flex: 1;
+    height: 100%;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    padding: 0 16px;
+    border-radius: 3px;
+    }
+    .header__search-btn{
+        @include headerColor;
+        padding: 10px;
+        border-radius: 3px;
+        margin: 0px 4px;
+        width: 60px;
+    }
+}
+.header__Notification{
+    padding-right: 24px ;
+    display: flex;
+    .header__Noti{
+        line-height: 32px;
+        .header__Noti-icon{
+            font-size: 1.8rem;
+            @include none_decoration;
+            color: $textColor;
+            padding: 0 26px;
+            font-weight: 500;
+        }
+    }
+    .header__span{
+        padding: 8px 16px;
+        font-size: 1.4rem;
+        color: #FFFFFF;
+        background-color: #FF8800;
+        border-color: #FF8800;
+        @include none_decoration;
+        border-radius: 3px;
+    }
+}
+.grid__boxcenter{
+    @include boxcenter;
+}
+.row{
+    @include row;
+}
+.grid__column_2{
+    @include column2;
+}
+.container{
+    background-color: $background-color;
+}
+.container-name{
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 12px;
+    border-bottom: 1px solid rgb(244 244 244);
+    margin-bottom: 5px;
+}
+.home-item{
+    padding: 10px;
+    border-bottom: 1px solid rgb(244 244 244);
+
+}
+.item-img{
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.item-name{
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 6px 0px 6px 0px;
+}
+.item-span{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #d0021b;
+}
+.item-info{
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.item-icon{
+    font-size: 1rem;
+    color: $item_info_color;
+}
+.item-time{
+    font-size: 1rem;
+    color: $item_info_color;
+    padding-left: 5px ;
+    padding-right: 5px ;
+}
+.item-infomation{
+    color: $item_info_color;
+    font-size: 1rem;
+}
